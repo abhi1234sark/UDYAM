@@ -1,0 +1,48 @@
+.form-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.progress-tracker {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.step {
+  padding: 10px;
+  border-radius: 5px;
+  background: lightgray;
+}
+
+.step.active {
+  background: green;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 10px;
+  }
+}
