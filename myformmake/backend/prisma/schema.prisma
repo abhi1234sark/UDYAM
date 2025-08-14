@@ -13,3 +13,19 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model UdyamForm {
+  id                 Int       @id @default(autoincrement())
+  aadhaarNumber      String    @unique
+  ownerName          String
+  aadhaarDeclaration Boolean
+  panNumber          String
+  panName            String
+  dateOfBirth        String
+  panDeclaration     Boolean
+  address            String
+  pincode            String
+  city               String
+  state              String
+  createdAt          DateTime  @default(now())
+}
