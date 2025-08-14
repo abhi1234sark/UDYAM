@@ -115,9 +115,9 @@ app.post('/api/submit-form', async (req, res) => {
   }
 });
 
-// Get all submissions (for admin purposes)
+//Get all submissions (for admin purposes)
 app.get('/api/submissions', async (req, res) => {
-  try {
+ try {
     const submissions = await prisma.udyamForm.findMany({
       orderBy: {
         createdAt: 'desc'
@@ -125,8 +125,8 @@ app.get('/api/submissions', async (req, res) => {
     });
 
     res.json({
-      success: true,
-      data: submissions
+     success: true,
+     data: submissions
     });
 
   } catch (error) {
@@ -141,17 +141,17 @@ app.get('/api/submissions', async (req, res) => {
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({
-    success: true,
+ res.json({
+   success: true,
     message: 'Server is running',
     timestamp: new Date().toISOString()
-  });
+ });
 });
 
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log(`Health check: http://localhost:${PORT}/api/health`);
+  //console.log(`Health check: http://localhost:${PORT}/api/health`);
 });
 
 // Graceful shutdown
