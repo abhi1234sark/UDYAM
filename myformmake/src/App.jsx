@@ -126,7 +126,7 @@ export default function App() {
             state: formData['ctl00_ContentPlaceHolder1_txtState']
           };
 
-          const response = await fetch('http://localhost:5000/api/submit-form', {
+          const response = await fetch('https://udyam-khy2.onrender.com/api/submit-form', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
